@@ -1,0 +1,31 @@
+$breakpoint-tablet: 1024px;
+$breakpoint-desktop: 1400px;
+
+.image-list{
+    position: relative;
+    height: 100%;
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 5px;
+    }
+
+    &__title,
+    &__loading {
+        padding: 0 10px;
+    }
+
+    &__item {
+        transition:all 0.4s;
+        width: 50%;
+
+        @media (min-width: $breakpoint-tablet) {
+            width: 33.33%;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+            width: 20%;
+        }
+    }
+}
